@@ -1,0 +1,14 @@
+{{#if movies}}
+        {{#each movies}}
+        <li>{{this.movie}} {{this.score}} {{this.thoughts}}</li>
+        {{/each}}
+{{/if}}
+<form style = 'float: left; padding: 5px;' method="post" action="/api/movies">
+    <label>Movie Title</label>
+    <input type="text" name="movie">
+    <label>Score</label>
+    <input type="text" name="score">
+    <label>Thoughts</label>
+    <input type = "text" name = "thoughts">
+  <button type="submit" onClick = "window.location.reload()">Add Movie</button>
+</form>
