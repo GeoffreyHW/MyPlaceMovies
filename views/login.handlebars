@@ -1,7 +1,17 @@
-<form method="post" action="/users/login">
-    <label>Username</label>
-    <input type="text" name="username">
-    <label>Password</label>
-    <input type="password" name="password">
-  <button type="submit">Submit</button>
-</form>
+<div id="loginForm">
+  <form method="post" action="/users/login">
+    <div class="container">
+      <label>
+        <input type="text" name="username" required>
+        <div class="label-text">Username</div>
+      </label>
+    </div>
+    <div class="container">
+      <label>
+        <input type="password" name="password" required>
+        <div class="label-text">Password</div>
+      </label>
+    </div>
+    <button type="submit" id="loginButton">Submit</button>
+  </form>
+</div>

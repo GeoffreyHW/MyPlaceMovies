@@ -1,3 +1,20 @@
+#loginButton{
+  background-color: #333333;
+  border: 2px solid white;
+  border-radius: 22px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: all 200ms;
+}  
+#loginButton:hover, loginButton:focus{
+  background-color: white;
+  color: #333333;
+  border:2px solid #333333;
+}
 /* Space out content a bit */
 body {
     padding-top: 1.5rem;
@@ -52,9 +69,66 @@ body {
     font-size: 1.5rem;
   }
   
+  #loginForm{
+    background-color: #333333;
+    width:500px; 
+  }
+  form {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  label {
+    display: block;
+    letter-spacing: 4px;
+    padding-top: 30px;
+    text-align: center;
+  }
+  label .label-text {
+    color: #9b9b9b;
+    cursor: text;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    transform: translateY(-34px);
+    transition: all 0.3s;
+  }
+  label input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #4a4a4a;
+    color: white;
+    font-size: 36px;
+    letter-spacing: -1px;
+    outline: 0;
+    padding: 5px 20px;
+    text-align: center;
+    transition: all 0.3s;
+    width: 200px;
+  }
+  label input:focus {
+    width: 400px;
+  }
+  label input:focus + .label-text {
+    color: #f0f0f0;
+    font-size: 13px;
+    transform: translateY(-74px);
+  }
+  label input:valid + .label-text {
+    font-size: 13px;
+    transform: translateY(-74px);
+  }
+  
   /* Supporting marketing content */
   .marketing {
+    height: fill;
+    width: fill;
+    text-align: center;
     margin: 3rem 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;  
   }
   .marketing p + h4 {
     margin-top: 1.5rem;
