@@ -11,7 +11,7 @@ var flash = require('connect-flash');
 var expressValidator = require('express-validator');
 
 //connect to database
-mongoose.connect('mongodb://localhost/loginapp', {useMongoClient: true});
+mongoose.connect('mongodb://admin:password@ds044667.mlab.com:44667/movieapp', {useMongoClient: true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {

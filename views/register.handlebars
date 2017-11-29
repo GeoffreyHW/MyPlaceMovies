@@ -3,15 +3,27 @@
         <div class="alert alert-danger">{{msg}}</div>
     {{/each}}
 {{/if}}
-<form method = "POST" action = "/users/register">
-    <label>Username</label>
-    <input type = "text" name = "uname">
 
-    <label>Password</label>
-    <input type = "password" name = "pword">
-
-    <label>Confirm Password</label>
-    <input type = "password" name = "same_pass">
-
-    <button type = "submit">Submit</button>
-</form>
+<div id="registerForm">
+  <form method="POST" action="/users/register">
+    <div class="container">
+      <label>
+        <input type="text" name="uname" required>
+        <div class="label-text">Username</div>
+      </label>
+    </div>
+    <div class="container">
+      <label>
+        <input type="password" name="pword" required>
+        <div class="label-text">Password</div>
+      </label>
+    </div>
+    <div class="containter">
+        <label>
+            <input type = "password" name = "same_pass">
+            <div class="label-text">Confirm Password</div>    
+        </label>       
+    </div>
+    <button type="submit" id="registerButton">Submit</button>
+  </form>
+</div>

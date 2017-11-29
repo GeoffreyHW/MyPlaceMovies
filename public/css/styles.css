@@ -15,6 +15,25 @@
   color: #333333;
   border:2px solid #333333;
 }
+
+#registerButton{
+  background-color: #333333;
+  border: 2px solid white;
+  border-radius: 22px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: all 200ms;
+}  
+#registerButton:hover, registerButton:focus{
+  background-color: white;
+  color: #333333;
+  border:2px solid #333333;
+}
+
 /* Space out content a bit */
 body {
     padding-top: 1.5rem;
@@ -73,6 +92,12 @@ body {
     background-color: #333333;
     width:500px; 
   }
+
+  #registerForm{
+    background-color: #333333;
+    width:500px; 
+  }
+  
   form {
     text-align: center;
     padding-top: 30px;
