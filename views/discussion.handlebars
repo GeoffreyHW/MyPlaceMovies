@@ -1,0 +1,12 @@
+<form style = 'float: left; padding: 5px;' method="post" action="/api/movies">
+    <h3>Enter your discussion post here!</h3>
+    <textarea rows="4" cols="50" name="post" form="usrform">
+Enter text here...</textarea>
+  <button type="submit" onClick = "window.location.reload()">Add Movie</button>
+</form>
+
+{{#if discussion}}
+    {{#each discussion}}
+    <li>{{this.discussion}}</li>
+    {{/each}}
+{{/if}}

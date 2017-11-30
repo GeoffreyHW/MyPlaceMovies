@@ -1,4 +1,4 @@
-#loginButton{
+#loginButton, #registerButton, #addButton{
   background-color: #333333;
   border: 2px solid white;
   border-radius: 22px;
@@ -10,25 +10,7 @@
   text-transform: uppercase;
   transition: all 200ms;
 }  
-#loginButton:hover, loginButton:focus{
-  background-color: white;
-  color: #333333;
-  border:2px solid #333333;
-}
-
-#registerButton{
-  background-color: #333333;
-  border: 2px solid white;
-  border-radius: 22px;
-  color: white;
-  cursor: pointer;
-  font-size: 20px;
-  margin-top: 20px;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  transition: all 200ms;
-}  
-#registerButton:hover, registerButton:focus{
+#loginButton:hover, loginButton:focus, #registerButton:hover, registerButton:focus, #addButton:hover, addButton:focus{
   background-color: white;
   color: #333333;
   border:2px solid #333333;
@@ -97,7 +79,7 @@ body {
     background-color: #333333;
     width:500px; 
   }
-  
+
   form {
     text-align: center;
     padding-top: 30px;
