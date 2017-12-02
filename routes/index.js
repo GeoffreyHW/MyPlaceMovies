@@ -2,7 +2,6 @@ var express = require('express')
 var router = express.Router()
 var Movie = require('../models/movie');
 
-
 router.get('/', isLoggedInAuth, function(req,res){
     Movie.find(function(err, movies){
         if(err) res.send(err)

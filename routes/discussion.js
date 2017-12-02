@@ -2,7 +2,7 @@ var express = require('express')
 var router = express.Router()
 var Discussion = require('../models/discussions');
 
-router.get('/discussion', isLoggedInAuth, function(req,res){
+router.get('/', isLoggedInAuth, function(req,res){
     Discussion.find(function(err, discussion){
         if(err) res.send(err)
         res.render('discussion',{
@@ -20,17 +20,18 @@ function isLoggedInAuth(req, res, next){
     }
 }
 
-router.post('/api/discussion', function(req,res){
+router.post('/api', function(req,res){
     var discussion = new Discussion({
         post: req.body.post,
-        poster: req.body.user
+        poster: req.user.username
     })
+    console.log(discussion)
     discussion.save(function(err,data) {
         if (err) throw err;
     })
     Discussion.find(function(err, discussion){
         if(err) res.send(err)
-        res.redirect('/')
+        res.redirect('/discussion')
     })
     
 })
