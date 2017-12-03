@@ -1,5 +1,5 @@
 #loginButton, #registerButton, #addButton, #addPost, #addFriend{
-  background-color: #333333;
+  background-color: #08415c;
   border: 2px solid white;
   border-radius: 22px;
   color: white;
@@ -12,8 +12,8 @@
 }  
 #loginButton:hover, #loginButton:focus, #registerButton:hover, #registerButton:focus, #addButton:hover, #addButton:focus, #addPost:hover, #addPost:focus, #addFriend:hover, #addFriend:focus{
   background-color: white;
-  color: #333333;
-  border:2px solid #333333;
+  color: #08415c;
+  border:2px solid #08415c;
 }
 .card {
   /* Add shadows to create the "card" effect */
@@ -83,12 +83,14 @@ body {
   }
   
   #loginForm{
-    background-color: #333333;
+    color:white;
+    background-color: #08415c;
     width:500px; 
   }
 
   #registerForm{
-    background-color: #333333;
+    color:white;
+    background-color: #08415c;
     width:500px; 
   }
 
@@ -105,7 +107,7 @@ body {
     text-align: center;
   }
   label .label-text {
-    color: #9b9b9b;
+    color: white;
     cursor: text;
     font-size: 20px;
     line-height: 20px;
@@ -116,7 +118,7 @@ body {
   label input {
     background-color: transparent;
     border: 0;
-    border-bottom: 2px solid #4a4a4a;
+    border-bottom: 2px solid white;
     color: white;
     font-size: 36px;
     letter-spacing: -1px;
@@ -130,7 +132,7 @@ body {
     width: 400px;
   }
   label input:focus + .label-text {
-    color: #f0f0f0;
+    color: white;
     font-size: 13px;
     transform: translateY(-74px);
   }

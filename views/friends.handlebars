@@ -1,13 +1,13 @@
-<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:45%">
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:45%; background-color: #08415c; padding: 15px;">
     <form style = 'float: left; padding: 5px; padding-bottom: 30px;' method="post" action="/friends/addFriend" id = "discussionform">
-        <h3>Enter a friends username</h2>
+        <h3 style="color:white">Enter a friends username</h2>
         <input type = "textarea" name = "name">
         <button type="submit" onClick = "window.location.reload()" id="addFriend">Add Friend</button>
     </form>
     <div class="container">
-        <h3>My Friends</h3>
+        <h3 style="color:white">My Friends</h3>
         {{#if friendMovies}}
-            <ul style="list-style: none; padding: 0; margin: 0;">
+            <ul style="list-style: none; padding: 0; margin: 0; color:white;">
             {{#each friendMovies}}
                 <li>{{this.username}}</li>
             {{/each}}
