@@ -28,9 +28,8 @@ router.post('/friends/addFriend', isLoggedInAuth, function(req,res){
         for(var i = 0; i < person.movies.length; i++){
             obj.movies.push(person.movies[i])
         }
-        console.log(obj)
+        //console.log(obj)
         user.friendMovies.push(obj)
-        //console.log(user)
         user.save(function(err,data){
             if(err) throw err
             else res.redirect('/friends')
