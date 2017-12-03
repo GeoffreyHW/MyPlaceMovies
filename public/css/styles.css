@@ -1,4 +1,4 @@
-#loginButton, #registerButton, #addButton{
+#loginButton, #registerButton, #addButton, #addPost, #addFriend{
   background-color: #333333;
   border: 2px solid white;
   border-radius: 22px;
@@ -10,10 +10,20 @@
   text-transform: uppercase;
   transition: all 200ms;
 }  
-#loginButton:hover, loginButton:focus, #registerButton:hover, registerButton:focus, #addButton:hover, addButton:focus{
+#loginButton:hover, #loginButton:focus, #registerButton:hover, #registerButton:focus, #addButton:hover, #addButton:focus, #addPost:hover, #addPost:focus, #addFriend:hover, #addFriend:focus{
   background-color: white;
   color: #333333;
   border:2px solid #333333;
+}
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 /* Space out content a bit */
