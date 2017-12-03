@@ -5,6 +5,10 @@ var mongoose = require('mongoose');
 var User = require('./../models/user.js');
 require('./../models/user')
 
+router.get('/home', function(req,res){
+    res.render('home')
+})
+
 router.get('/', isLoggedInAuth, function(req,res){
     var movies = req.user.movies
     res.render('index',{movies:movies})    
@@ -52,7 +56,7 @@ function isLoggedInAuth(req, res, next){
         return next()
     }
     else{
-        res.redirect('/users/login')
+        res.redirect('/home')
     }
 }
 
