@@ -15,20 +15,29 @@ router.get('/about', function(req,res){
 })
 
 router.get('/friends', function(req,res){
-    res.render('friends')
+    var friendMovies = req.user.friendMovies
+    res.render('friends', {friendMovies:friendMovies})
 })
 
 router.post('/friends/addFriend', isLoggedInAuth, function(req,res){
     var user = req.user
-    console.log(req.body.name)
+    //console.log(req.body.name)
     User.findOne({username : req.body.name}, function(err, person){
-        console.log(person)
+        var uname = person.username
+        var obj = {username: uname, movies: []}
+        for(var i = 0; i < person.movies.length; i++){
+            obj.movies.push(person.movies[i])
+        }
+        console.log(obj)
+        user.friendMovies.push(obj)
+        //console.log(user)
+        user.save(function(err,data){
+            if(err) throw err
+            else res.redirect('/friends')
+        })
     })
     //user.movies.push(movie)
-    user.save(function(err,data){
-        if(err) throw err
-        else res.redirect('/friends')
-    })})
+})
 
     /*req.user.movies.find(function(err, movies){
         if(err) res.send(err)

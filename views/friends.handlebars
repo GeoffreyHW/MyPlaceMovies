@@ -3,9 +3,13 @@
      <input type = "textarea" name = "name">
   <button type="submit" onClick = "window.location.reload()">Add Friend</button>
 </form>
-{{#if discussion}}
-    {{#each discussion}}
-    <li>{{this.poster}}</li>
-    <li>{{this.post}}</li>
+{{#if friendMovies}}
+    {{#each friendMovies}}
+        {{this.username}}
+        {{#each this.movies}}
+            {{this.title}}
+            {{this.score}}
+            {{this.thoughts}}
+        {{/each}}
     {{/each}}
 {{/if}}
