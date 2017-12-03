@@ -5,10 +5,15 @@ var bcrypt = require('bcryptjs')
 var Schema = mongoose.Schema
 var UserSchema = new Schema({
 	username: String,
-    password:String
+    password:String,
+    movies: [{title: String, score: String, thoughts: String}],
+    friendMovies: [{title: String, score: String, thoughts: String}]
 })
 
 UserSchema.pre('save', function(next) {
+    if(!this.isModified('password')){
+        return next();
+    }
     var user = this
     bcrypt.genSalt(10, function(err, salt) {
         bcrypt.hash(user.password, salt, function(err, hash) {

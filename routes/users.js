@@ -44,7 +44,6 @@ router.post('/register', function(req,res){
 passport.use(new LocalStrategy(
     function(username, password, done){
         User.findOne({ username: username }, function(err,user){
-            console.log(username)
             if(err) throw err;
             if(!user){
                 return done(null, false, { message: 'Incorrect username.' })

@@ -21,6 +21,7 @@ db.once('open', function() {
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var discussion = require('./routes/discussion')
+var newmovies = require('./routes/newmovies')
 
 var app = express()
 var session = require('express-session')
@@ -59,6 +60,7 @@ app.use(flash())
 app.use('/', routes)
 app.use('/users', users)
 app.use('/discussion', discussion)
+app.use('/newmovies', newmovies)
 
 var port = (process.env.Port||8080)
 app.listen(port, function(){
