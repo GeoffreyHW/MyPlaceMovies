@@ -1,6 +1,9 @@
 var express = require('express')
 var router = express.Router()
 var Movie = require('../models/movie');
+var mongoose = require('mongoose');
+var User = require('./../models/user.js');
+require('./../models/user')
 
 router.get('/', isLoggedInAuth, function(req,res){
     var movies = req.user.movies
@@ -10,6 +13,23 @@ router.get('/', isLoggedInAuth, function(req,res){
 router.get('/about', function(req,res){
     res.render('about')
 })
+
+router.get('/friends', function(req,res){
+    res.render('friends')
+})
+
+router.post('/friends/addFriend', isLoggedInAuth, function(req,res){
+    var user = req.user
+    console.log(req.body.name)
+    User.findOne({username : req.body.name}, function(err, person){
+        console.log(person)
+    })
+    //user.movies.push(movie)
+    user.save(function(err,data){
+        if(err) throw err
+        else res.redirect('/friends')
+    })})
+
     /*req.user.movies.find(function(err, movies){
         if(err) res.send(err)
         res.render('index',{
