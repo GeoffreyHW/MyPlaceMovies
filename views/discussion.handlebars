@@ -1,18 +1,21 @@
-<div class="container">
-    <form style = 'float: left; padding: 5px;' method="post" action="/discussion/api" id = "discussionform">
-        <h3>Enter your discussion post here!</h3>
-        <textarea rows="4" cols="50" name="post" form = "discussionform"></textarea>
-        <br>
-        <button type="submit" onClick = "window.location.reload()" id="addPost">Add Post</button>
-    </form>
+<div style="background-color: #08415c">
+    <div class="container">
+        <form style = 'float: left; padding: 5px;' method="post" action="/discussion/api" id = "discussionform">
+            <h4 style="color:white">Enter your discussion post here!</h4>
+            <textarea rows="4" cols="50" name="post" form = "discussionform"></textarea>
+            <br>
+            <button type="submit" onClick = "window.location.reload()" id="addPost">Add Post</button>
+        </form>
+    </div>
+    <div class="container">
+        {{#if discussion}}
+            {{#each discussion}}
+            <div class="card">
+                <p>{{this.poster}} says</p>
+                {{this.post}}
+            </div>
+            {{/each}}
+        {{/if}}
+    </div>
 </div>
-<div class="container">
-    {{#if discussion}}
-        {{#each discussion}}
-        <div class="card">
-            <p>{{this.poster}} says</p>
-            {{this.post}}
-        </div>
-        {{/each}}
-    {{/if}}
-</div>
+

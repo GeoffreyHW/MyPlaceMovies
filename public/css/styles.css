@@ -1,5 +1,5 @@
 #loginButton, #registerButton, #addButton, #addPost, #addFriend{
-  background-color: #333333;
+  background-color: #08415c;
   border: 2px solid white;
   border-radius: 22px;
   color: white;
@@ -12,8 +12,8 @@
 }  
 #loginButton:hover, #loginButton:focus, #registerButton:hover, #registerButton:focus, #addButton:hover, #addButton:focus, #addPost:hover, #addPost:focus, #addFriend:hover, #addFriend:focus{
   background-color: white;
-  color: #333333;
-  border:2px solid #333333;
+  color: #08415c;
+  border:2px solid #08415c;
 }
 .card {
   /* Add shadows to create the "card" effect */
