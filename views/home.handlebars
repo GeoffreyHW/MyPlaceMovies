@@ -1,1 +1,27 @@
-OUR HOME PAGE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<table>
+      <tr>
+        <td style="padding:0 20px 0 75px;"><img src = 'image/coco.jpg' data-toggle = "popover" data-html = "true" data-placement = "right" data-content = "Average Rating: 8.9/10 <br /><br /> Despite his family's generations-old ban on music, young Miguel dreams of becoming an accomplished musician like his idol Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead. After meeting a charming trickster named Héctor, the two new friends embark on an extraordinary journey to unlock the real story behind Miguel's family history."></td>
+        <td></td>
+        <td style="padding:0 20px 0 75px;"><img src = 'image/thor.jpg' data-toggle = "popover" data-html = "true" data-placement = "right" data-content = "Average Rating: 8.2/10 <br /><br /> Imprisoned on the other side of the universe, the mighty Thor finds himself in a deadly gladiatorial contest that pits him against the Hulk, his former ally and fellow Avenger. Thor's quest for survival leads him in a race against time to prevent the all-powerful Hela from destroying his home world and the Asgardian civilization."></td>
+        <td></td>
+        <td style="padding:0 20px 0 75px;"><img src = 'image/justice.jpg' data-toggle = "popover" data-html = "true" data-placement = "right" data-content = "Average Rating: 7.2/10 <br /><br />Fueled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne enlists newfound ally Diana Prince to face an even greater threat. Together, Batman and Wonder Woman work quickly to recruit a team to stand against this newly awakened enemy. Despite the formation of an unprecedented league of heroes -- Batman, Wonder Woman, Aquaman, Cyborg and the Flash -- it may be too late to save the planet from an assault of catastrophic proportions."></td>
+        <td></td>
+      </tr>
+</table>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover(); 
+});
+</script>
