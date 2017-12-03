@@ -3512,6 +3512,7 @@ tbody.collapse.show {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  color: #08415c;
 }
 
 .nav-link:focus, .nav-link:hover {
@@ -8353,7 +8354,11 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .text-muted {
-  color: #868e96 !important;
+  color: #8c1c13 !important;
+}
+
+.text-muted:hover {
+	text-decoration: none;
 }
 
 .text-hide {
