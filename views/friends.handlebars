@@ -1,15 +1,42 @@
-<form style = 'float: left; padding: 5px;' method="post" action="/friends/addFriend" id = "discussionform">
-    <h2>Enter a friends username</h2>
-     <input type = "textarea" name = "name">
-  <button type="submit" onClick = "window.location.reload()">Add Friend</button>
-</form>
-{{#if friendMovies}}
-    {{#each friendMovies}}
-        {{this.username}}
-        {{#each this.movies}}
-            {{this.title}}
-            {{this.score}}
-            {{this.thoughts}}
-        {{/each}}
-    {{/each}}
-{{/if}}
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:45%">
+    <form style = 'float: left; padding: 5px; padding-bottom: 30px;' method="post" action="/friends/addFriend" id = "discussionform">
+        <h3>Enter a friends username</h2>
+        <input type = "textarea" name = "name">
+        <button type="submit" onClick = "window.location.reload()">Add Friend</button>
+    </form>
+    <div class="container">
+        <h3>My Friends</h3>
+        {{#if friendMovies}}
+            <ul style="list-style: none; padding: 0; margin: 0;">
+            {{#each friendMovies}}
+                <li>{{this.username}}</li>
+            {{/each}}
+            </ul>
+        {{/if}} 
+    </div>       
+</div>
+<div class="container" style="margin-top: -60px;">
+    {{#if friendMovies}}
+    <h2>Their Reviews</h2>
+    <div class="container"></div>
+        <table align="center" style="table-layout: fixed; padding-top: 20px;">
+            <tr>
+                <td style="width: 200px; font-weight: bold;">Reviewer</td>
+                <td style="width: 200px; font-weight: bold;">Movie</td>
+                <td style="width: 200px; font-weight: bold;">Score</td>
+                <td style="width: 200px; font-weight: bold;">Thoughts</td>
+            </tr>
+                {{#each friendMovies}}
+                    {{#each this.movies}}
+                    <tr>
+                        <td>{{this.username}}</td>
+                        <td>{{this.title}}</td>
+                        <td>{{this.score}}</td>
+                        <td>{{this.thoughts}}</td>
+                    </tr>
+                    {{/each}}
+                {{/each}}
+        </table>
+    </div>
+    {{/if}}
+</div>

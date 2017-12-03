@@ -7,7 +7,7 @@ var UserSchema = new Schema({
 	username: String,
     password:String,
     movies: [{title: String, score: String, thoughts: String}],
-    friendMovies: [{username: String, movies: [{title: String, score: String, thoughts: String}]}]
+    friendMovies: [{username: String, movies: [{username: String, title: String, score: String, thoughts: String}]}]
 })
 
 UserSchema.pre('save', function(next) {

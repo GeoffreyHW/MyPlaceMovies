@@ -26,7 +26,8 @@ router.post('/friends/addFriend', isLoggedInAuth, function(req,res){
         var uname = person.username
         var obj = {username: uname, movies: []}
         for(var i = 0; i < person.movies.length; i++){
-            obj.movies.push(person.movies[i])
+            thing = {username: person.username, title: person.movies[i].title, score: person.movies[i].score, thoughts: person.movies[i].thoughts}
+            obj.movies.push(thing)
         }
         //console.log(obj)
         user.friendMovies.push(obj)
