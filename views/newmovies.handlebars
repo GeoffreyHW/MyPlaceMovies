@@ -2,12 +2,12 @@
 <style>
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,1.0);
     transition: 0.3s;
     width: auto;
     padding:20px;
-    margin:10px;
-     display:flex;
+    margin:30px;
+     color:black;
 }
 
 .card:hover {
@@ -16,11 +16,31 @@
 }
 
 .container {
-    padding: 2px 16px;
+    padding: 2px 20px;
+
 }
      .container2{
           display:flex;
-     }     
+          margin:0 auto;
+
+     }
+     .container3{
+          display:flex;
+          margin: 0 auto;
+          background-color:white;
+          border-radius:5px;
+          padding:20px;
+     }
+     h2{
+          color:white;
+          text-align:center;
+     }
+     h5{
+          color:#08415c;
+     }
+     button{
+          border: 20px solid #4CAF50;
+     }
      
 #main{ background:#08415c;padding:10px; width:auto;}
 
@@ -32,7 +52,13 @@
 
 
 <div id = "main">
+     <h2>Movies that we recommend you add!</h2>
      
+     <div class = "container2">
+          <div class = "container3">
+               <h5>These are some movies chosen by us over at MyPlaceMovies<br> that we genuinely enjoy! Be sure to check them out!</h5>
+          </div>
+     </div>
      <div class = "container2">
      <div class="card">
        <img src="image/coco.jpg" alt="Avatar" width = "150px" height = "200px">
@@ -67,7 +93,7 @@
      
      <div class = "container2">
      <div class="card">
-       <img src="image/coco.jpg" alt="Avatar" width = "150px" height = "200px">
+       <img src="image/daddy2.jpg" alt="Avatar" width = "150px" height = "200px">
        <div class="container">
          <form style = 'float: left; padding: 5px;' method="post" action="/newmovies/coco" id = "discussionform">
          <button type="submit" onClick = "window.location.reload()" class="btn btn-default">Add Movie</button>
@@ -77,7 +103,7 @@
 
 
      <div class="card">
-       <img src="image/thor.jpg" alt="Avatar" width = "150px" height = "200px">
+       <img src="image/getout.jpg" alt="Avatar" width = "150px" height = "200px">
        <div class="container">
             <form style = 'float: left; padding: 5px;' method="post" action="/newmovies/thor" id = "discussionform">
          <button type="submit" onClick = "window.location.reload()" class="btn btn-default">Add Movie</button>
@@ -87,7 +113,7 @@
 
 
      <div class="card">
-       <img src="image/justice.jpg" alt="Avatar" width = "150px" height = "200px">
+       <img src="image/disaster.jpg" alt="Avatar" width = "150px" height = "200px">
        <div class="container">
            <form style = 'float: left; padding: 5px;' method="post" action="/newmovies/justiceleague" id = "discussionform">
          <button type="submit" onClick = "window.location.reload()" class="btn btn-default">Add Movie</button>
