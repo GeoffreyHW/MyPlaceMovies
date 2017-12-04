@@ -4,6 +4,7 @@ Getting Started (Windows)
 
 Step 1.) Download and install Node JS (8.9.1) from
 https://nodejs.org/en/
+*Ensure that the NPM package manager is selected when installing*
 
 Step 2.) Restart your computer.
 (Seriously, it won't run until you restart.)
